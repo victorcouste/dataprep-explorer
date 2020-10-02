@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Explore a Google GCS file</title>
+
+    <form  method="post" class="form-inline">
+
+        <div class="col-lg-2">
+            <label>Bucket name</label>
+            <input type="text" class="form-control" placeholder="bucket" name="bucket" value="{{bucket}}">
+        </div>
+        <div class="col-lg-2">
+            <label>File path</label>
+            <input class="form-control" placeholder="filepath" name="filepath" value="{{filepath}}">
+        </div>
+
+    <button type="submit" class="btn btn-primary">Explore</button>
+
+    </form>
+
+    <a href="{{recipe_url}}" target="blank">{{recipe_url}}</a>
