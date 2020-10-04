@@ -2,11 +2,11 @@
 
 A simple Web application to explore [Google Cloud Storage](https://cloud.google.com/storage) files with [Google Cloud Dataprep by Trifata](https://cloud.google.com/dataprep").
 
-The application create all necessary Dataprep objects (Dataset, Flow and Recipe) and generate URLs to Dataprep interfaces.
+This application create all necessary Dataprep objects (Dataset, Flow and Recipe) and generate URLs to Dataprep interfaces.
 
 This Web application use Python Flask Web framework and Dataprep REST API (https://api.trifacta.com/).
 
-Python source code using Dataprep API can be found directlin [create_dataprep_objects.py](https://github.com/victorcouste/dataprep-explorer/create_dataprep_objects.py) file.
+Python source code using Dataprep API can be found in [create_dataprep_objects.py](https://github.com/victorcouste/dataprep-explorer/blob/master/create_dataprep_objects.py) file.
 
 ## Installation
 
@@ -26,10 +26,10 @@ Python source code using Dataprep API can be found directlin [create_dataprep_ob
 
 ## Running
 
-1/ Update in [create_dataprep_objects.py](https://github.com/victorcouste/dataprep-explorer/create_dataprep_objects.py) Python file 2 parameters:
+1/ Update in [create_dataprep_objects.py](https://github.com/victorcouste/dataprep-explorer/blob/master/create_dataprep_objects.py) Python file 2 parameters:
 
 * DATAPREP_AUTH_TOKEN  : The token to use API and to authenticate to Dataprep, it can be generated from Dataprep UI with a project's owner user
-* DATAPREP_FOLDERID : The folder flow ID of Dataprep where you want to generate flows
+* DATAPREP_FOLDERID : The Dataprep folder flow ID where you want to generate flows
 
 2/ Start the Flask Web app
 
