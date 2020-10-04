@@ -1,19 +1,49 @@
 <!doctype html>
-<title>Explore a Google GCS file</title>
-
+<html lang="en">
+    <head>
+        <title>Explore a Google GCS file with Cloud Dataprep</title>
+    </head>
+    <body>
+    <br>
+    <h2>Explore a file's content with Google Cloud Dataprep</a></h2>
+    <br>
+    <p>Set the GCS bucket name and the full path of a file stored in <a href="https://cloud.google.com/storage" target="_blank">Google Cloud Storage</a>
+    <br>
+    Then the <strong>Create and Explore</strong> button will generate direct links to explore the file's content with <a href="https://cloud.google.com/dataprep" target="_blank">Cloud Dataprep</a> by <a href="https://www.trifacta.com" target="_blank">Trifacta</a>.</p>
     <form  method="post" class="form-inline">
 
-        <div class="col-lg-2">
-            <label>Bucket name</label>
-            <input type="text" class="form-control" placeholder="bucket" name="bucket" value="{{bucket}}">
-        </div>
-        <div class="col-lg-2">
-            <label>File path to explore</label>
-            <input class="form-control" placeholder="filepath" name="filepath" value="{{filepath}}">
-        </div>
-
-    <button type="submit" class="btn btn-primary">Explore</button>
+        <table border="0">
+        <tr style="height: 50px;">
+        <td><label>GCS bucket name</label></td>
+        <td ><input style="width:500px" type="text" placeholder="Bucket name" name="bucket" value="{{bucket}}"></a></td>
+        </tr><tr>
+        <td><label>File path to explore</label></td>
+        <td><input style="width:500px" placeholder="File path like folder/subfolder/file.csv" name="filepath" value="{{filepath}}"></td>
+        </tr>
+        </table>
+        <br>
+        <button type="submit">Create Dataprep objects and Explore your file</button>
 
     </form>
+    <br>
+    <table border="0">
+    <tr style="height: 25px;">
+    <td>File uri to explore</td>
+    <td><a href="{{file_uri}}" target="_blank">{{file_uri}}</a></td>
+    </tr><tr>
+    <td>Link to the Dataprep Recipe to explore the file's content</td>
+    <td><a href="{{recipe_url}}" target="_blank">{{recipe_url}}</a></td>
+    </tr><tr>
+    <td>Link to the Dataprep Flow for the recipe</td>
+    <td><a href="{{flow_url}}" target="_blank">{{flow_url}}</a></td>
+    </tr><tr>
+    <td>Link to the Dataprep Dataset of the file</td>
+    <td><a href="{{dataset_url}}" target="_blank">{{dataset_url}}</a></td>
+    </tr>
+    </table>
 
-    <a href="{{recipe_url}}" target="blank">{{recipe_url}}</a>
+    <br>
+    <p>This application is using <a href="https://api.trifacta.com/dataprep-premium/index.html" target="_blank">Dataprep REST API</a> to automatically create Dataprep dataset, flow and recipe for the file.</p>
+
+</body>
+</html>
