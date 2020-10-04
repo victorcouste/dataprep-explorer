@@ -2,6 +2,8 @@
 
 A simple Web application to explore [Google Cloud Storage](https://cloud.google.com/storage) files with [Google Cloud Dataprep by Trifacta](https://cloud.google.com/dataprep).
 
+ ![alt tag](https://github.com/victorcouste/dataprep-explorer/blob/master/dataprep_explorer.png)
+
 This application create all necessary Dataprep objects (Dataset, Flow and Recipe) and generate URLs to Dataprep interfaces.
 
 This Web application use Python Flask Web framework and Dataprep REST API (https://api.trifacta.com/).
