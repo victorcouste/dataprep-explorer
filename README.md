@@ -31,7 +31,8 @@ Python source code using Dataprep API can be found in [create_dataprep_objects.p
 
 In the Dataprep Explorer directory run:
 ```shell script
-FLASK_APP=datataprep-explorer.py flask run --port 5000
+FLASK_APP=datataprep-explorer.py
+flask run --port 5000
 ```
   
 Now you must be able to go to http://127.0.0.1:5000/ and play with the application:
