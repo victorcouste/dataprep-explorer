@@ -33,7 +33,7 @@ If need more details on Flask framework installation and configuration, [see her
 
 In the Dataprep Explorer directory run:
 ```shell script
-FLASK_APP=datataprep-explorer.py
+export FLASK_APP=datataprep-explorer.py
 flask run --port 5000
 ```
   
