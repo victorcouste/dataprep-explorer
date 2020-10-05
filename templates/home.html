@@ -1,54 +1,74 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Explore a Google GCS file with Cloud Dataprep</title>
-    </head>
-    <body>
-    <br>
-    <h2>Explore a file's content with Google Cloud Dataprep</a></h2>
-    <br>
-    <p>Set the GCS bucket name and the full path of a file stored in <a href="https://cloud.google.com/storage" target="_blank">Google Cloud Storage</a>
-    <br>
-    Then the <strong>Create and Explore</strong> button will generate direct links to explore the file's content with <a href="https://cloud.google.com/dataprep" target="_blank">Cloud Dataprep</a> by <a href="https://www.trifacta.com" target="_blank">Trifacta</a>.</p>
-    <form  method="post" class="form-inline">
-
-        <table border="0">
-        <tr style="height: 50px;">
-        <td><label>GCS bucket name</label></td>
-        <td ><input style="width:500px" type="text" placeholder="Bucket name" name="bucket" value="{{bucket}}"></a></td>
-        </tr><tr>
-        <td><label>File path to explore</label></td>
-        <td><input style="width:500px" placeholder="File path like folder/subfolder/file.csv" name="filepath" value="{{filepath}}"></td>
-        </tr>
-        </table>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore a Google GCS file with Cloud Dataprep</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+<div class="section">
+    <div class="container">
+        <h1><b>Explore a file's content with Google Cloud Dataprep</b></h1>
         <br>
-        <button type="submit">Create Dataprep objects and Explore your file</button>
+        &nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='dataprep_explorer.png') }}" width="20%" height="20%">
+        <br><br>
+        <p>Set the GCS bucket name and the full path of a file stored in <a href="https://cloud.google.com/storage"
+                                                                            target="_blank">Google Cloud Storage</a>
+            <br>
+            Then the <strong>Create and Explore</strong> button will generate direct links to explore the file's content
+            with <a href="https://cloud.google.com/dataprep" target="_blank">Cloud Dataprep</a> by <a
+                    href="https://www.trifacta.com" target="_blank">Trifacta</a>.</p>
+        <br>
+        <form method="post" class="form-inline">
+            <table border="0">
+                <tr style="height: 50px;">
+                    <td style="padding-right: 10px"><label>GCS bucket name</label></td>
+                    <td><input autofocus="autofocus" style="width:500px" type="text" placeholder="Bucket name" name="bucket"
+                               value="{{ bucket }}"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 10px"><label>File to import</label></td>
+                    <td><input style="width:500px" placeholder="File path like folder/subfolder/file.csv"
+                               name="filepath" value="{{ filepath }}"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">Create Dataprep objects and Explore your file</button>
 
-    </form>
-    <br>
+        </form>
+        <br>
 
-    {% if file_uri != '' %}
+        {% if file_uri != '' %}
 
-    <table border="0">
-    <tr style="height: 25px;">
-    <td>File uri to explore</td>
-    <td><a href="{{file_uri}}" target="_blank">{{file_uri}}</a></td>
-    </tr><tr>
-    <td>Link to the Dataprep Recipe to explore the file's content</td>
-    <td><a href="{{recipe_url}}" target="_blank">{{recipe_url}}</a></td>
-    </tr><tr>
-    <td>Link to the Dataprep Flow for the recipe</td>
-    <td><a href="{{flow_url}}" target="_blank">{{flow_url}}</a></td>
-    </tr><tr>
-    <td>Link to the Dataprep Dataset of the file</td>
-    <td><a href="{{dataset_url}}" target="_blank">{{dataset_url}}</a></td>
-    </tr>
-    </table>
+            <table border="0">
+                <tr style="height: 25px;">
+                    <td style="width:500px">Link to the Dataprep Recipe to explore the file's content</td>
+                    <td><a href="{{ recipe_url }}" target="_blank">{{ recipe_url }}</a></td>
+                </tr>
+                <tr>
+                    <td>Link to the Dataprep Flow for the recipe</td>
+                    <td><a href="{{ flow_url }}" target="_blank">{{ flow_url }}</a></td>
+                </tr>
+                <tr>
+                    <td>Link to the Dataprep Dataset of the file</td>
+                    <td><a href="{{ dataset_url }}" target="_blank">{{ dataset_url }}</a></td>
+                </tr>
+                <tr></tr>
+                <td>&nbsp;</td>
+                <tr>
+                    <td>File uri</td>
+                   <td><a href="{{ file_uri }}" target="_blank">{{ file_uri }}</a></td>
+                </tr>
+            </table>
 
-     {% endif %}
+        {% endif %}
 
-    <br>
-    <p>This application is using <a href="https://api.trifacta.com/dataprep-premium/index.html" target="_blank">Dataprep REST API</a> to automatically create Dataprep dataset, flow and recipe for the file.</p>
+        <br>
+        <p>This application is using <a href="https://api.trifacta.com/dataprep-premium/index.html" target="_blank">Dataprep
+            REST API</a> to automatically create Dataprep dataset, flow and recipe for the file.</p>
 
+    </div>
+</div>
 </body>
 </html>
