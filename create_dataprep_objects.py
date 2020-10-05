@@ -5,8 +5,8 @@ from datetime import datetime
 
 # --- Token for Dataprep Authentication - Can be generated in Dataprep interface for project's owner
 DATAPREP_AUTH_TOKEN='XXXXXXXXXXXX'
-# --- Dataprep folder ID to create new flows
-DATAPREP_FOLDERID=yyyyyyy
+# --- Dataprep folder ID to create new flows. You can get it from the url of a folder.
+DATAPREP_FOLDERID=0#1234
 
 def get_dataprep_urls(file_uri):
 
