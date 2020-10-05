@@ -20,6 +20,8 @@ Python source code using Dataprep API can be found in [create_dataprep_objects.p
 
       pip install -r requirements.txt
 
+If need more details on Flask framework installation and configuration, [see here](https://flask.palletsprojects.com/en/1.1.x/installation/)
+
 ## Running
 
 1/ Update 2 parameters in [create_dataprep_objects.py](https://github.com/victorcouste/dataprep-explorer/blob/master/create_dataprep_objects.py) Python file:
