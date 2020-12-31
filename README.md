@@ -1,4 +1,4 @@
-# dataprep-explorer
+# Cloud Dataprep Explorer
 
 A simple Web application to explore [Google Cloud Storage](https://cloud.google.com/storage) files with [Google Cloud Dataprep by Trifacta](https://cloud.google.com/dataprep).
 
